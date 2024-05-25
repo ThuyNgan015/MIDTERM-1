@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 export const userData = {
   firstName: "Ronan", // feel free to replace the name value
@@ -7,11 +7,11 @@ export const userData = {
 };
 
 // Edit the User component code to output the userData data
-export function User() {
+export function User({ user }) {
   return (
     <div id="user" data-testid="user">
-      <h2>TODO: FIRST NAME LAST NAME</h2>
-      <p>TODO: TITLE</p>
+      <h2>{user.firstName} {user.lastName}</h2>
+      <p>{user.title}</p>
     </div>
   );
 }
@@ -22,7 +22,7 @@ function App() {
     <div id="app">
       <h1>WELCOME !!</h1>
       <p>PNV students are you ready to React Course ? You got this 💪</p>
-      <User />
+      <User user={userData}/>
     </div>
   );
 }
